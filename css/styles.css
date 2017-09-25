@@ -1,0 +1,13 @@
+body{
+	background-color: #999999;
+}
+h1{
+	color:red;
+	font-size: 44px;
+	font-family: Helvetia, "Times New Roman", Arial
+}
+h2{
+	color:blue;
+	font-size: 32px;
+	font-weight: bold;
+}
