@@ -165,15 +165,15 @@ img{
 	padding: 60px 0;
 }
 
-.qualidade:after {
+.qualidade::after {
 	content: "";
 	width: 634px;
 	height: 83px;
 	display: block;
 	background: url("../img/linhas.png") no-repeat center;
 	position: absolute;
-	top: 209px;
-	right: 162px;
+	top: 2389px;
+	right: 314px;
 	z-index: -1;
 }
 
