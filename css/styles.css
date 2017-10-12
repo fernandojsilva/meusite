@@ -56,20 +56,8 @@ img{
 	font-weight: bold;
 	text-transform: uppercase;
 }
-.botao {
-	border:3px solid #fec63e;
-	padding: 10px 30px;
-	color: #fec63e;
-	font-size: 14px;
-	line-height: 20px;
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: .1em;
-}
-.botao:hover{
-	color:#fff;
-	border-color:#fff;
-}
+
+
 .quote-externo{
 	max-width: 320px;
 	margin: 0 auto;
@@ -117,10 +105,6 @@ img{
 .produtos{
 	padding:60px 0;
 }
-/*.produtos_lista li {
-	background: #fec63e;
-	text-align: center;
-}*/
 
 .produtos_lista_icone {
 	background: #fec63e;
@@ -153,3 +137,103 @@ img{
 	background: #000;
 	padding: 20px 20px;
 }
+
+/* Portfólio */
+.portfolio{
+	padding:60px 0;
+	background:#000;
+}
+
+.portfolio .subtitulo{
+	color:#fec63e;
+}
+.portfolio .subtitulo:after{
+	background: #fec63e;
+}
+
+.portfolio .call p{
+	color:#fff;
+}
+
+.portfolio .portfolio_lista{
+	padding-top: 348px;
+}
+/* *************************** */
+
+/* Qualidade */
+.qualidade {
+	padding: 60px 0;
+}
+
+.qualidade:after {
+	content: "";
+	width: 634px;
+	height: 83px;
+	display: block;
+	background: url("../img/linhas.png") no-repeat center;
+	position: absolute;
+	top: 209px;
+	right: 162px;
+	z-index: -1;
+}
+
+.qualidade img{
+	margin: 0 auto; /* centralizar */
+}
+
+.qualidade_lista li{
+	text-align: center;
+	padding: 0 40px;
+}
+
+.qualidade_lista li h3{
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 25px;
+	text-transform: uppercase;
+	letter-spacing: .1em
+	margin-top:20px;
+}
+.qualidade_lista li h3:after{
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	background: #000;
+	margin: 2px auto;
+}
+.qualidade_lista li p{
+	padding: 10px 20px 20px 20px;
+}
+
+
+/* Botão */
+.botao {
+	border:3px solid #fec63e;
+	padding: 10px 30px;
+	color: #fec63e;
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: .1em;
+}
+.botao:hover{
+	color:#fff;
+	border-color:#fff;
+}
+.botao.botao-preto:hover{
+	color:#000;
+	border-color:#000;
+}
+
+.call{
+	padding-top: 40px;
+	text-align: center;
+	clear:both;
+}
+
+.call p{
+	margin-bottom: 20px;
+}
+/* ************************** */
