@@ -155,9 +155,18 @@ img{
 	color:#fff;
 }
 
-.portfolio .portfolio_lista{
-	padding-top: 348px;
+.portfolio_lista img{
+	margin: 0 auto;
 }
+
+.portfolio_lista div:last-of-type{
+	margin-top: 15px;
+}
+
+.portfolio_lista div:first-of-type{
+	margin-bottom: 15px;
+}
+
 /* *************************** */
 
 /* Qualidade */
@@ -165,15 +174,15 @@ img{
 	padding: 60px 0;
 }
 
-.qualidade::after {
+.qualidade .subtitulo:after {
 	content: "";
 	width: 634px;
 	height: 83px;
 	display: block;
 	background: url("../img/linhas.png") no-repeat center;
 	position: absolute;
-	top: 2389px;
-	right: 314px;
+	top: 2279px;
+	right: 322px;
 	z-index: -1;
 }
 
