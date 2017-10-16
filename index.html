@@ -3,15 +3,124 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Meu Site</title>
-	<link rel="stylesheet" href="">
-	<script src=""></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>bik craft</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/animacao.js"></script>
 </head>
 <body>
-	<h1>Título do Meu Site</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil itaque odit magnam quasi quidem dignissimos optio doloribus saepe, tempore, quis quam possimus sapiente eum, blanditiis praesentium iste, minus perferendis nostrum.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, id optio, sed repellendus cupiditate ab quia veniam perferendis aperiam qui. Sint aliquid esse, sunt quae quam aperiam accusantium reprehenderit inventore.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quidem, sint assumenda perspiciatis suscipit necessitatibus deserunt ad voluptas temporibus ipsum pariatur cum distinctio! Tempore voluptate maiores magni odio, inventore quasi!</p>
+	<header class="header">
+		<div class="container">
+			<a href="index.html" class="col-md-4 col-sm-4 col-xs-4">
+				<img src="img/bikcraft.png" alt="Logo marca Bikcraft">
+			</a>
+			<nav class="col-md-8 col-sm-8 col-xs-8 header_menu">
+				<ul>
+					<li><a href="sobre.html">Sobre</a></li>
+					<li><a href="produtos.html">Produtos</a></li>
+					<li><a href="portifolio.html">Portfólio</a></li>
+					<li><a href="contato.html">Contato</a></li>
+				</ul>				
+			</nav>
 
+		</div>
+	</header>
+	
+	<section class="row introducao">
+		<div class="container animated fadeInDown">
+			<h1>Bicicletas Feitas a Mão</h1>
+			<blockquote class="quote-externo">
+				<p>"não tenha nada em sua casa que voce
+				não considere útil ou acredita ser bonito"</p>
+				<cite>WILLIAM MORRIS</cite>
+			</blockquote>
+			<a href="produtos.html" class="btn botao">Orçamento</a>
+		</div>
+	</section>
+
+	<section class="container produtos animated fadeInDown">
+		<h2 class="subtitulo">Produtos</h2>
+		<ul class="produtos_lista">
+			<li class="col-md-4 col-sm-4 col-xs-12">
+				<div class="produtos_lista_icone">
+					<div class="produtos_icone">
+						<img src="img/produtos/passeio.png" alt="Bicicleta Passeio">
+					</div>
+					<h3>Passeio</h3>
+					<p>Muito melhor do que passear pela orla a vidros fechados.</p>
+				</div>
+			</li>
+			<li class="col-md-4 col-sm-4 col-xs-12">
+				<div class="produtos_lista_icone">
+					<div class="produtos_icone">
+						<img src="img/produtos/esporte.png" alt="Bicicleta Esporte">
+					</div>
+					<h3>Esporte</h3>
+					<p>Mais rápida do que Forrest Gump, ninguém vai pegar você.</p>
+				</div>	
+			</li>
+			<li class="col-md-4 col-sm-4 col-xs-12">
+				<div class="produtos_lista_icone">
+					<div class="produtos_icone">
+						<img src="img/produtos/retro.png" alt="Bicicleta Retrô">
+					</div>
+					<h3>Retrô</h3>
+					<p>O passado volta para lembrarmos o que devemos fazer no futuro.</p>
+				</div>	
+			</li>
+		</ul>
+		<div class="call">
+			<p>clique aqui e veja os detalhes dos produtos</p>
+			<a href="produtos.html" class="btn botao botao-preto">Produtos</a>
+		</div>
+	</section>	
+	<section class="row portfolio">
+		<div class="container">
+			<h2 class="subtitulo">Portfólio</h2>
+			<div class="portfolio_lista">
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<img src="img/portfolio/passeio.jpg" class="img-rounded" alt="Bicicleta Passeio">
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<img src="img/portfolio/retro.jpg" class="img-rounded"	alt="Bicicleta Retrô">
+				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<img src="img/portfolio/esporte.jpg" class="img-rounded" alt="Bicicleta Esporte">
+				</div>
+			</div>		
+			<div class="call">
+				<p>conheça mais o nosso portfólio</p>
+				<a href="portfolio.html" class="btn botao">Portfólio</a>
+			</div>
+		</div>
+	</section>
+	<section class="qualidade container">
+		<h2 class="subtitulo">Qualidade</h2>
+		<img src="img/bikcraft-qualidade.png" alt="Bikcraft">
+		<!-- ul.qualidade_lista>li.col-md-6*3>h3+p -->
+		<ul class="qualidade_lista">
+			<li class="col-md-4">
+				<h3>Durabilidade</h3>
+				<p></p>
+			</li>
+			<li class="col-md-4">
+				<h3>Design</h3>
+				<p></p>
+			</li>
+			<li class="col-md-4">
+				<h3>Sustentabilidade</h3>
+				<p></p>
+			</li>
+		</ul>
+			<div class="call">
+				<p>conheça mais a nossa história</p>
+				<a href="sobre.html" class="btn botao botao-preto">Sobre</a>
+			</div>
+
+	</section>
 </body>
 </html>
