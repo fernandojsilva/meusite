@@ -155,13 +155,18 @@ img{
 	color:#fff;
 }
 
-.portfolio .portfolio_lista{
-	padding-top: 34px;
-}
-
 .portfolio_lista img{
 	margin: 0 auto;
 }
+
+.portfolio_lista div:last-of-type{
+	margin-top: 15px;
+}
+
+.portfolio_lista div:first-of-type{
+	margin-bottom: 15px;
+}
+
 /* *************************** */
 
 /* Qualidade */
