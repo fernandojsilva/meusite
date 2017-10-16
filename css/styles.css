@@ -156,7 +156,11 @@ img{
 }
 
 .portfolio .portfolio_lista{
-	padding-top: 348px;
+	padding-top: 34px;
+}
+
+.portfolio_lista img{
+	margin: 0 auto;
 }
 /* *************************** */
 
