@@ -165,7 +165,7 @@ img{
 	padding: 60px 0;
 }
 
-.qualidade::after {
+.qualidade:after {
 	content: "";
 	width: 634px;
 	height: 83px;
