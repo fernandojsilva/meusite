@@ -57,12 +57,12 @@ img{
 	text-transform: uppercase;
 }
 
-
 .quote-externo{
 	max-width: 320px;
 	margin: 0 auto;
 	margin-bottom: 40px;
 	color: #fff;
+	border-left:none;
 }
 .quote-externo cite {
 	font-style: normal;
@@ -136,6 +136,10 @@ img{
 .produtos_icone{
 	background: #000;
 	padding: 20px 20px;
+}
+
+.produtos_lista li{
+	margin: 0 auto;
 }
 
 /* Portfólio */
