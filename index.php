@@ -12,8 +12,7 @@
 // 	die('Invalid query: ' . mysql_error());
 // }
 
-//for($i = 0; $array[$i] = mysql_fetch_assoc($rows); $i++) ;
-
+// for($i = 0; $array[$i] = mysql_fetch_assoc($result); $i++);
 
 	define( 'MYSQL_HOST', 'localhost' );
 	define( 'MYSQL_USER', 'id3007439_bike' );
@@ -32,10 +31,25 @@
 	$cnx->query("SET NAMES utf8;");
 
 	$sql = 'SELECT * FROM produtos WHERE 1=1';
-	$result = $cnx->query($sql);
-	for($i = 0; $array[$i] =$result->fetch(PDO::FETCH_ASSOC); $i++) ;		
+	// $result = $cnx->query($sql); // 1º Modelo
+	// for($i = 0; $array[$i] = $result->fetch(PDO::FETCH_ASSOC); $i++) ;		
 
-//print_r($array);
+	// 2º Modelo + seguro
+	try {
+		$query = $cnx->prepare($sql);
+		$query->execute();
+		$resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+	} catch (PDOException $e) {
+		echo $e->getMessage();
+	}		
+
+	 foreach($resultado as $r){
+	 	$array[] = array($r['modelo'],$r['descricao']);
+	}		
+
+
+
+ // print_r($array);
 
 ?>
 <!DOCTYPE html>
@@ -91,8 +105,8 @@
 					<div class="produtos_icone">
 						<img src="img/produtos/passeio.png" alt="Bicicleta Passeio">
 					</div>
-					<h3><?php echo ($array[0]['modelo']); ?></h3>
-					<p><?php echo ($array[0]['descricao']); ?></p>
+					<h3><?php echo $array[0][0]; //($array[0]['modelo']); ?></h3>
+					<p><?php echo ($array[0][1]); //($array[0]['descricao']); ?></p>
 				</div>
 			</li>
 			<li class="col-md-4 col-sm-4 col-xs-12">
@@ -100,8 +114,8 @@
 					<div class="produtos_icone">
 						<img src="img/produtos/esporte.png" alt="Bicicleta Esporte">
 					</div>
-					<h3><?php echo ($array[1]['modelo']); ?></h3>
-					<p><?php echo ($array[1]['descricao']); ?></p>
+					<h3><?php echo $array[1][0]; //($array[1]['modelo']); ?></h3>
+					<p><?php echo ($array[1][1]); //($array[1]['descricao']); ?></p>
 				</div>	
 			</li>
 			<li class="col-md-4 col-sm-4 col-xs-12">
@@ -109,8 +123,8 @@
 					<div class="produtos_icone">
 						<img src="img/produtos/retro.png" alt="Bicicleta Retrô">
 					</div>
-					<h3><?php echo ($array[2]['modelo']); ?></h3>
-					<p><?php echo ($array[2]['descricao']); ?></p>
+					<h3><?php echo $array[2][0]; //($array[2]['modelo']); ?></h3>
+					<p><?php echo ($array[2][1]); //($array[2]['descricao']); ?></p>
 				</div>	
 			</li>
 		</ul>
