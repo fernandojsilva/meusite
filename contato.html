@@ -12,6 +12,25 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/responsivo.css">
 	<script src="js/animacao.js"></script>
+		<style>
+			#map {
+			  height: 400px;
+			  /* width: 100%; */
+			 }
+		</style>
+		<script>
+			function initMap() {
+			var uluru = {lat: -22.9479296, lng: -43.1847366};
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 14,
+				center: uluru
+			});
+			var marker = new google.maps.Marker({
+				position: uluru,
+				map: map
+			});
+			}
+		</script>
 </head>
 <body>
 	<header class="header">
@@ -73,7 +92,7 @@
 			</div>
 	</section>
 
-	<section class="container contato_mapa">
+	<section class="container contato_mapa" id="map">
 			<a href="http://google.com" target="_blank" class="col-md-12"><img src="img/endereco-bikcraft.jpg" alt="Endereço da Bikcraft"></a>
 	</section>
 
@@ -123,5 +142,8 @@
 	</footer>
 	<!-- Fim do Rodapé -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>	
+	<!-- JavaScript -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBydoMCZiM2Kj1zsa35d3ImCkNWTJkZWYc&callback=initMap"></script>	
+
 </body>
 </html>
