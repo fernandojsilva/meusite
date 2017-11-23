@@ -1,19 +1,41 @@
 <?php
 
-$cnx = mysql_connect('localhost', 'id3007439_bike', 'B1k3craft');
-if (!$cnx) {
-	die('Could not connect: ' . mysql_error());
-}
-// echo 'Connected successfully';
-mysql_select_db('id3007439_bikcraft', $cnx) or die('Could not select database.');
+// $cnx = mysql_connect('localhost', 'id3007439_bike', 'B1k3craft');
+// if (!$cnx) {
+// 	die('Could not connect: ' . mysql_error());
+// }
+// // echo 'Connected successfully';
+// mysql_select_db('id3007439_bikcraft', $cnx) or die('Could not select database.');
 
-$result = mysql_query('SELECT * FROM produtos WHERE 1=1');
-if (!$result) {
-	die('Invalid query: ' . mysql_error());
-}
+// $result = mysql_query('SELECT * FROM produtos WHERE 1=1');
+// if (!$result) {
+// 	die('Invalid query: ' . mysql_error());
+// }
 
-for($i = 0; $array[$i] = mysql_fetch_assoc($result); $i++) ;
-	// print_r($array);
+//for($i = 0; $array[$i] = mysql_fetch_assoc($rows); $i++) ;
+
+
+	define( 'MYSQL_HOST', 'localhost' );
+	define( 'MYSQL_USER', 'id3007439_bike' );
+	define( 'MYSQL_PASSWORD', 'B1k3craft' );
+	define( 'MYSQL_DB_NAME', 'id3007439_bikcraft' );
+
+	try
+	{
+	    $cnx = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
+	}
+	catch ( PDOException $e )
+	{
+	    echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
+	}
+
+	$cnx->query("SET NAMES utf8;");
+
+	$sql = 'SELECT * FROM produtos WHERE 1=1';
+	$result = $cnx->query($sql);
+	for($i = 0; $array[$i] =$result->fetch(PDO::FETCH_ASSOC); $i++) ;		
+
+//print_r($array);
 
 ?>
 <!DOCTYPE html>
@@ -69,8 +91,8 @@ for($i = 0; $array[$i] = mysql_fetch_assoc($result); $i++) ;
 					<div class="produtos_icone">
 						<img src="img/produtos/passeio.png" alt="Bicicleta Passeio">
 					</div>
-					<h3><?php echo utf8_encode($array[0]['modelo']); ?></h3>
-					<p><?php echo utf8_encode($array[0]['descricao']); ?></p>
+					<h3><?php echo ($array[0]['modelo']); ?></h3>
+					<p><?php echo ($array[0]['descricao']); ?></p>
 				</div>
 			</li>
 			<li class="col-md-4 col-sm-4 col-xs-12">
@@ -78,8 +100,8 @@ for($i = 0; $array[$i] = mysql_fetch_assoc($result); $i++) ;
 					<div class="produtos_icone">
 						<img src="img/produtos/esporte.png" alt="Bicicleta Esporte">
 					</div>
-					<h3><?php echo utf8_encode($array[1]['modelo']); ?></h3>
-					<p><?php echo utf8_encode($array[0]['descricao']); ?></p>
+					<h3><?php echo ($array[1]['modelo']); ?></h3>
+					<p><?php echo ($array[1]['descricao']); ?></p>
 				</div>	
 			</li>
 			<li class="col-md-4 col-sm-4 col-xs-12">
@@ -87,8 +109,8 @@ for($i = 0; $array[$i] = mysql_fetch_assoc($result); $i++) ;
 					<div class="produtos_icone">
 						<img src="img/produtos/retro.png" alt="Bicicleta Retrô">
 					</div>
-					<h3><?php echo utf8_encode($array[2]['modelo']); ?></h3>
-					<p><?php echo utf8_encode($array[0]['descricao']); ?></p>
+					<h3><?php echo ($array[2]['modelo']); ?></h3>
+					<p><?php echo ($array[2]['descricao']); ?></p>
 				</div>	
 			</li>
 		</ul>
