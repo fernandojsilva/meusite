@@ -43,7 +43,7 @@
 		echo $e->getMessage();
 	}		
 
-	 foreach($resultado as $r){
+	foreach($resultado as $r){
 	 	$array[] = array($r['modelo'],$r['descricao']);
 	}		
 
